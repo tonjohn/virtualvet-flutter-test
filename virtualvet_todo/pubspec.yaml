@@ -1,0 +1,45 @@
+name: virtualvet_todo
+description: A new Flutter project.
+
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  overlay_support: ^1.0.5
+
+  # Format Date
+  intl: ^0.16.1
+
+  # Local storage
+  hive: ^1.4.2
+  path_provider: ^1.6.5
+
+  # State Management
+  flutter_bloc: ^6.0.5
+  equatable: ^1.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/images/
+
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.otf
+        - asset: assets/fonts/Montserrat-Medium.otf
+        - asset: assets/fonts/Montserrat-Bold.otf
