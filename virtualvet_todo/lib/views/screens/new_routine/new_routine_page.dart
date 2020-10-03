@@ -137,7 +137,6 @@ class _NewRoutinePageState extends State<NewRoutinePage> {
                     child: BlocConsumer<RoutineCubit, RoutineState>(
                       listener: (context, state) {
                         if (state is RoutineSuccess) {
-                          CustomDialogs.showSuccessSnackBar(state.message);
                           Navigator.pop(context);
                         }
                       },

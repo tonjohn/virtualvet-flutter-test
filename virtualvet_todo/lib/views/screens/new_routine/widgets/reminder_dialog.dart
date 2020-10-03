@@ -36,6 +36,7 @@ addReminder(BuildContext context, {DateTime date}) async {
                   child: SizedBox(
                     height: 140.0,
                     child: CupertinoDatePicker(
+                      minimumDate: DateTime.now(),
                       initialDateTime: DateTime.now(),
                       onDateTimeChanged: (date) {
                         time = date;
