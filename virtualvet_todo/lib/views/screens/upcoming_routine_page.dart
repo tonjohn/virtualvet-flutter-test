@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 
 import '../../bloc/bloc.dart';
 import '../../models/routine.dart';
+import '../../utils/utils.dart';
 
 class UpComingRoutinePage extends StatelessWidget {
   final List<Color> colors = [
@@ -29,6 +30,17 @@ class UpComingRoutinePage extends StatelessWidget {
         child: BlocBuilder<RoutineCubit, RoutineState>(
           builder: (context, state) {
             if (state is RoutineSuccess) {
+              if (state.routines.isEmpty) {
+                return Center(
+                  child: Text(
+                    "You don't have Upcoming Routine",
+                    style: getSubtitle(context).copyWith(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 18.0,
+                    ),
+                  ),
+                );
+              }
               final upcoming = getUpcomingRoutine(state.routines);
               List<String> dates = upcoming.keys.toList();
               return ListView.builder(
